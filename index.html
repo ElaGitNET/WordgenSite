@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Word Generator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  <style>
+    /* CSS for the generator button */
+    .generator {
+      margin-top: 20px;
+    }
+    body {
+        background-color: #01445a; /* Blue */
+    }
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Random Word Generator</h1>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <h2>Generate a random word!</h2>
+                <p>Click the button to generate a random word</p>
+                <button class="generator" onclick="generateWord()">Generate Word</button>
+                <p id="word">Your word is:</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript function to generate a random word
+        function generateWord() {
+        var words = ["Counsellor", "Gardener", "Builder", "Beauty Salon", "Barber", "Hairdresser", "Book shop", "Florist", "Charity", "Gift shop"];
+        var randomIndex = Math.floor(Math.random() * words.length);
+        var randomWord = words[randomIndex];
+        document.getElementById("word").textContent = randomWord;
+        }
+    </script>
+    <footer class="footer">
+        <p>&copy; 2023 Village Web Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>
